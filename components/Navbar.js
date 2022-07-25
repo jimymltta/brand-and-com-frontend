@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 sticky top-0 z-10">
       <div className="navbar-start">
         <a className="btn btn-ghost normal-case text-xl">Brand&Com</a>
       </div>
