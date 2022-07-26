@@ -1,17 +1,21 @@
+import Link from "next/link";
+
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 sticky top-0 z-10">
       <div className="navbar-start">
-        <a className="btn btn-ghost normal-case text-xl">Brand&Com</a>
+        <a className="btn btn-ghost normal-case text-xl" href="/">
+          Brand&Com
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a>Accueil</a>
+            <a href="/">Accueil</a>
           </li>
           <li tabIndex="0">
             <a>
-              Services
+              Service
               <svg
                 className="fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +26,7 @@ const Navbar = () => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="p-2 bg-darkgray z-20">
+            <ul className="p-2 bg-white z-20">
               <li>
                 <a>Community Management</a>
               </li>
@@ -35,10 +39,10 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <a>Portfolio</a>
+            <a href="/portfolio">Portfolio</a>
           </li>
           <li>
-            <a>Contact</a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -62,12 +66,12 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex="0"
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 right-8 bg-darkgray"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 right-8 bg-white"
           >
             <li>
-              <a>Accueil</a>
+              <a href="/">Accueil</a>
             </li>
-            <li tabIndex="0">
+            <li tabIndex="0" className="relative">
               <a className="justify-between">
                 Services
                 <svg
@@ -80,7 +84,7 @@ const Navbar = () => {
                   <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                 </svg>
               </a>
-              <ul className="p-2 bg-darkgray">
+              <ul className="p-2 bg-white absolute -left-56">
                 <li>
                   <a>Community Management</a>
                 </li>
@@ -93,10 +97,10 @@ const Navbar = () => {
               </ul>
             </li>
             <li>
-              <a>Portfolio</a>
+              <a href="/portfolio">Portfolio</a>
             </li>
             <li>
-              <a>Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>

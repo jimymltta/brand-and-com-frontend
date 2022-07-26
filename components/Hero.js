@@ -4,6 +4,9 @@ import logo from "../public/logo.png";
 // Icons imports
 import { BsChevronDown } from "react-icons/bs";
 
+// helpers imports
+import { handleClick } from "../helpers/functions";
+
 const Hero = () => {
   return (
     <>
@@ -30,7 +33,10 @@ const Hero = () => {
               amélioration de notoriété et toutes activités de marketing
               digital.
             </p>
-            <button className="btn bg-primary hover:bg-hover border-primary text-white">
+            <button
+              className="btn bg-primary hover:bg-hover border-primary text-white"
+              onClick={handleClick}
+            >
               Ça m'intéresse
             </button>
             <BsChevronDown className="mx-auto mt-8 text-xl" />

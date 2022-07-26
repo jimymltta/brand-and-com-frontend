@@ -1,12 +1,13 @@
 import Card from "./Card";
 
-// props content = title, text, image passing to Card component
+// Helpers imports
+import { handleClick } from "../helpers/functions";
 
 const CardsSection = ({ title, text, image }) => {
   return (
     <div>
       <h2 className="text-white mb-20 text-3xl font-bold mt-20">Services</h2>
-      <div className="flex gap-6 my-8 mb-20">
+      <div className="flex flex-wrap gap-6 my-8 mb-20">
         <Card
           title="Community Management"
           text="Gestion de votre communauté, création de contenu, interactions et suivi des statistiques."
@@ -27,7 +28,10 @@ const CardsSection = ({ title, text, image }) => {
         <h2 className="mb-6 text-lg font-bold text-white">
           Vous êtes intéressé.e par l'un de ces services ?
         </h2>
-        <button className="btn bg-primary text-white hover:bg-hover">
+        <button
+          className="btn bg-primary text-white hover:bg-hover"
+          onClick={handleClick}
+        >
           On discute ?
         </button>
       </div>
