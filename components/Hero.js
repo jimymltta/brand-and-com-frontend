@@ -36,6 +36,7 @@ const Hero = () => {
             <button
               className="btn bg-primary hover:bg-hover border-primary text-white"
               onClick={handleClick}
+              
             >
               Ça m'intéresse
             </button>

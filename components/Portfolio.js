@@ -1,4 +1,4 @@
-import PortfolioCard from "./Card";
+import HomePortfolioCard from "./Card";
 
 const Portfolio = ({ portfolios }) => {
   // TODO: Trouver un moyen d'afficher les images s'il y en a
@@ -16,7 +16,7 @@ const Portfolio = ({ portfolios }) => {
       <div className="flex flex-wrap items-center justify-center gap-6 my-8 mb-20">
         {portfolios &&
           portfolios.map((item) => (
-            <PortfolioCard
+            <HomePortfolioCard
               title={item.attributes.Title}
               text={item.attributes.Content}
               image={item.attributes.Image}

@@ -1,10 +1,11 @@
 // TODO: Utilser email.js pour envoyer les data du formulaire par mail
-// (Doit être fait avec Pierre parce qu'il faut connecter le compte gmail à l'API email.js)
 
 // Icons imports
 import { FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
+  const handleSubmit = () => {};
+
   return (
     <>
       <h1 className="mb-6 text-3xl font-bold mt-20 text-center">
@@ -35,12 +36,12 @@ const Contact = () => {
       </div>
       <div
         style={{
-          backgroundImage: `url("./iconsBg.svg")`,
+          backgroundImage: `url("./iconsBgOverlay.svg")`,
+          objectFit: "cover",
         }}
-        // className="py-20"
       >
         <div
-          style={{ backdropFilter: "blur(3px)", height: "100%" }}
+          // style={{ backdropFilter: "blur(3px)", height: "100%" }}
           className="py-14"
         >
           <form className="flex flex-col justify-center items-center">
@@ -49,59 +50,59 @@ const Contact = () => {
               style={{ width: "50%" }}
             >
               <div className="flex flex-col grow">
-                <label className="text-black">
+                <label className="text-black font-bold mb-2">
                   Votre nom<span className="text-red-700">*</span>
                 </label>
                 <input
                   type="text"
                   name="name"
-                  placeholder="Jean"
-                  className="form-input px-4 py-3 rounded h-4 mb-4 "
+                  placeholder="Wayne"
+                  className="form-input px-4 py-4 rounded h-4 mb-6 border-none focus:outline-primary focus:ring-0"
                 />
               </div>
               <div className="flex flex-col grow">
-                <label className="text-black">
+                <label className="text-black font-bold mb-2">
                   Votre prénom<span className="text-red-700">*</span>
                 </label>
                 <input
                   type="text"
                   name="name"
-                  placeholder="Dupont"
-                  className="form-input px-4 py-3 rounded h-4 mb-4 "
+                  placeholder="Bruce"
+                  className="form-input px-4 py-4 rounded h-4 mb-6 border-none focus:outline-primary focus:ring-0"
                 />
               </div>
             </div>
             <div className="flex flex-row gap-8" style={{ width: "50%" }}>
               <div className="flex flex-col grow">
-                <label className="text-black">
+                <label className="text-black font-bold mb-2">
                   Email<span className="text-red-700">*</span>
                 </label>
                 <input
                   type="email"
                   name="email"
-                  placeholder="jeandupont@gmail.com"
-                  className="form-input px-4 py-3 rounded h-4 mb-4"
+                  placeholder="batman@secret.com"
+                  className="form-input px-4 py-4 rounded h-4 mb-6 border-none focus:outline-primary focus:ring-0"
                 />
               </div>
               <div className="flex flex-col grow">
-                <label className="text-black">
+                <label className="text-black font-bold mb-2">
                   Téléphone<span className="text-red-700">*</span>
                 </label>
                 <input
                   type="text"
                   name="phone"
                   placeholder="0606060606"
-                  className="form-input px-4 py-3 rounded h-4 mb-4"
+                  className="form-input px-4 py-4 rounded h-4 mb-6 border-none focus:outline-primary focus:ring-0"
                 />
               </div>
             </div>
-            <label className="text-black">
+            <label className="text-black font-bold w-1/2 mb-2">
               Message<span className="text-red-700">*</span>
             </label>
             <textarea
               name="message"
               placeholder="Merci de préciser votre demande dans ce champ. Plus vous donnez de détails, plus Brand&Com peut vous répondre rapidement"
-              className="form-input px-4 py-3 rounded mb-8 w-1/2"
+              className="form-input px-4 py-4 rounded mb-8 w-1/2 border-none focus:outline-primary focus:ring-0"
             />
             <button type="submit" className="btn mb-8">
               Envoyer

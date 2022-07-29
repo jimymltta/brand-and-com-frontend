@@ -1,21 +1,25 @@
-// line-clamp-{n}
+import React from "react";
 
-// TODO: trouver un moyen de limiter le <p> à 2 lignes
+import { handlePortfolioClick } from "../helpers/functions";
 
-const PortfolioCard = ({ title, text, image }) => {
+// TODO: lien vers chaque item (voir functions.js)
+
+function PortfolioCard({ title, text, image }) {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl hover:bg-primary transition-colors ease-out duration-300 hover:shadow-lg hover:shadow-gray-700 hover:cursor-pointer">
-      {image ? (
-        <figure>
-          <img src={image} alt="Shoes" />
-        </figure>
-      ) : null}
-      <div className="card-body hover:text-white">
-        <h2 className="card-title">{title}</h2>
-        <p className="card-text line-clamp-2">{text}</p>
+    <div className="card w-96 bg-base-100 shadow-xl mx-6 my-6">
+      <div className="card-body">
+        <h2 className="card-title uppercase underline underline-offset-2 decoration-primary decoration-2 mb-2">
+          {title}
+        </h2>
+        <p>{text}</p>
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary bg-primary border-primary hover:bg-hover hover:border-hover">
+            En savoir plus
+          </button>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default PortfolioCard;
